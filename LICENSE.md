@@ -1,3 +1,6 @@
+Copyright (c) 2014 by funivan (http://funivan.com).
+
+
 GNU GENERAL PUBLIC LICENSE
                        Version 2, June 1991
 

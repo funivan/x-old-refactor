@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        bootstrap="./PhpUnitBootstrap.php"
+        colors="true"
+        sstopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        convertErrorsToExceptions="true"
+        >
+
+    <filter>
+        <whitelist>
+            <directory>../src/</directory>
+        </whitelist>
+    </filter>
+
+</phpunit>
