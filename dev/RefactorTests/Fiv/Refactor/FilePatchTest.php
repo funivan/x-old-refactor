@@ -15,7 +15,7 @@
       $demoDataDirectoryPath = $this->getDemoDataDirectoryPath();
 
       $filePath = $demoDataDirectoryPath . 'text.js';
-      file_put_contents($filePath, '<?php echo "test-value";');
+      $this->createFile($filePath, '<?php echo "test-value";');
 
       $directoryPatch->apply($demoDataDirectoryPath);
 

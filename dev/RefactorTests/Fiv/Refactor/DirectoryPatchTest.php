@@ -59,7 +59,7 @@
       $demoDataDirectoryPath = $this->getDemoDataDirectoryPath();
 
       $filePath = $demoDataDirectoryPath . 'text.php';
-      file_put_contents($filePath, '<?php echo "test-value";');
+      $this->createFile($filePath, '<?php echo "test-value";');
 
       $directoryPatch->apply($demoDataDirectoryPath);
 
@@ -75,7 +75,6 @@
 
       $newFileContent = file_get_contents($filePath);
       $this->assertContains('other-value', $newFileContent);
-
 
       unlink($filePath);
 
@@ -100,4 +99,5 @@
       $data = ob_get_clean();
       $this->assertEquals('[' . $errorType . ']' . $errorMessage . "\n", $data);
     }
+
   }
