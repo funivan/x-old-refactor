@@ -1,11 +1,11 @@
 <?php
 
-  namespace RefactorTests\Logger;
+  namespace RefactorTests\Demo;
 
   /**
    * @author Ivan Shcherbak <dev@funivan.com> 1/17/14
    */
-  class CustomLogger extends \Fiv\Refactor\Log {
+  class Log extends \Fiv\Refactor\Log {
 
     public $logs = [];
 

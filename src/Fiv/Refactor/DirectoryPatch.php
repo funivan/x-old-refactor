@@ -92,6 +92,9 @@
      */
     protected function getFilesList($dir) {
       $rawList = shell_exec("find " . $dir . " -type f");
+      if (empty($rawList)) {
+        return [];
+      }
       $files = explode("\n", $rawList);
       return $files;
     }

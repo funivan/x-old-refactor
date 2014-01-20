@@ -1,6 +1,6 @@
 <?php
 
-  namespace RefactorTests\Logger;
+  namespace RefactorTests\Demo;
 
   /**
    * @author Ivan Shcherbak <dev@funivan.com> 1/17/14
