@@ -44,7 +44,13 @@
         '!test-value!' => 'test-value'
       ]));
 
-      $directoryPatch->apply($this->getDemoDataDirectoryPath());
+      $demoDirectory = $this->getDemoDataDirectoryPath() . '/custom_empty_dir';
+
+      if (!is_dir($demoDirectory)) {
+        mkdir($demoDirectory, 0777, true);
+      }
+      $directoryPatch->apply($demoDirectory);
+      rmdir($demoDirectory);
       $lastErrorLevel = $directoryPatch->getLogger()->getLastLogItem()->getLevel();
 
       $this->assertEquals(Log::LEVEL_INFO, $lastErrorLevel);
